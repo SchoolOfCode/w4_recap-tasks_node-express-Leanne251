@@ -1,3 +1,5 @@
+
+
 const users = [
   {
     id: 1,
@@ -21,7 +23,7 @@ const users = [
     catchphrase: "User-centric multimedia collaboration",
   },
   {
-    id: 4,
+    id: 5,
     first_name: "Barnabas",
     last_name: "Filpo",
     email: "bfilpo3@joomla.org",
@@ -352,3 +354,5 @@ const users = [
 ];
 
 export default users;
+
+console.log("users", users[7].id);

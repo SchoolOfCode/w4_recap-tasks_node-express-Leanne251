@@ -70,3 +70,35 @@ export function deleteUserByID(id) {
 } 
     
 // console.log("delete User", deleteUserByID(4));
+
+
+
+function generateID() {
+    // Look through the users list
+    // Find the first ID number missing, or the next number in the sequence
+    // return that number
+
+    //count through the array of objects checking if users.id increases by 1 each time. 
+    // if yes - continue the loop
+    // if no - users.id at this index + 1 = the new id. 
+   
+   function findDifference(previous, current, index, array){
+       
+        if (current - previous !== 1){
+            console.log(index)
+            return index;
+        }
+
+   }
+
+   users.id.reduce(findDifference)
+
+
+}
+
+
+// if at position 0 + 1 (1), id is equal to id at [0] + 1
+// then ad one to ID
+ 
+
+console.log("generate ID", generateID())
