@@ -9,7 +9,7 @@ const users = [
     catchphrase: "Synergized exuding firmware",
   },
   {
-    id: 2,
+    id: 0,
     first_name: "Paxon",
     last_name: "Semechik",
     email: "psemechik1@gizmodo.com",
@@ -23,7 +23,7 @@ const users = [
     catchphrase: "User-centric multimedia collaboration",
   },
   {
-    id: 5,
+    id: 4,
     first_name: "Barnabas",
     last_name: "Filpo",
     email: "bfilpo3@joomla.org",
@@ -355,4 +355,3 @@ const users = [
 
 export default users;
 
-console.log("users", users[7].id);

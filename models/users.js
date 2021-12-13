@@ -53,7 +53,7 @@ export function updateUserByID(id, updatedUser) {
  
 }
 
- console.log("update user by ID", updateUserByID(3, "holly"))
+//  console.log("update user by ID", updateUserByID(3, "holly"))
 
 
 // DELETE A USER BY ID
@@ -72,33 +72,24 @@ export function deleteUserByID(id) {
 // console.log("delete User", deleteUserByID(4));
 
 
-
 function generateID() {
-    // Look through the users list
-    // Find the first ID number missing, or the next number in the sequence
-    // return that number
+  
+    let newArray = [];
+    for (let index = 0; index < users.length; index++) {
+        const id = users[index].id;
+        newArray.push(id);
+    }
 
-    //count through the array of objects checking if users.id increases by 1 each time. 
-    // if yes - continue the loop
-    // if no - users.id at this index + 1 = the new id. 
-   
-   function findDifference(previous, current, index, array){
-       
-        if (current - previous !== 1){
-            console.log(index)
-            return index;
-        }
+    for (let i = 0; i < newArray.length; i++) {
+        if (i+1 !== newArray[i]){
+            console.log("i + 1", i+1, "newArray[i]", newArray[i]);
+            return i+1;
+         } 
+         else {return newArray.length +1}
+         
+    }
+        
+    }  
 
-   }
-
-   users.id.reduce(findDifference)
-
-
-}
-
-
-// if at position 0 + 1 (1), id is equal to id at [0] + 1
-// then ad one to ID
- 
 
 console.log("generate ID", generateID())
